@@ -1,0 +1,364 @@
+/* General body style */
+@font-face {
+    font-family: "ZoramldsLat-Light";
+    src: local(ZoramldsLat-Light), url("Zoram-GWeb-Light-Normal.woff2") format("truetype");
+    font-weight: 300;
+    font-style: normal; }
+
+
+
+@media (prefers-color-scheme: dark) {
+    body {
+        --main-background: #222;
+        --main-color: white;
+        --tr-dark:#333;
+        --tr-light:#555;
+    }
+
+}
+
+@media (prefers-color-scheme: light) {
+    body {
+        --main-background: #eee;
+        --main-color: black;
+        --tr-dark: #bbb;
+        --tr-light: #eee;
+    }
+}
+body {
+    font-family: "Segoe UI";
+    font-weight:400;
+    font-size: 19px;
+    padding: 20px 13.5% 136px 13.5%;
+    line-height: normal;
+    background:var(--main-background);
+    color:var(--main-color);
+}
+
+img.inlineimage {
+    vertical-align: middle!important;
+    margin-top: 0px!important; 
+    margin-bottom: 0px!important;
+    padding: 0px;
+    height: 25px!important;
+    width: 25px!important;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a, 
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin-top: 10px; 
+    margin-bottom: 18px;
+     /*margin-left: 4px;
+    margin-right: 2px;
+    vertical-align: middle;*/
+}
+
+
+/* Style for quote boxes
+		div.qbox
+		{
+		width: 470px;
+		border: 1px solid #e6e3da;
+		border-radius: 12px;
+		padding: 15px 18px;
+		margin-bottom: 20px;
+		background-color: #f3f0e7;
+		display: block;
+		} */
+
+/* Style for quote boxes */
+
+.NotYetImplemented {
+	
+	 display:none!important; 
+	 /* border: 4px solid purple; */
+}
+
+.WorkOnThis {
+	
+	border: 4px solid red;
+}
+
+.WillChange {
+	
+	 /* border: 4px solid blue; */
+}
+
+div.qbox {
+    border-top: 5px solid #2d7d9a;
+    border-bottom: 5px solid #2d7d9a;
+    padding: 18px 0px 0px 0px;
+    margin: 15px auto 15px auto;
+    display: block;
+    width: 65%;
+}
+/* Style for tip boxes */
+
+div.tbox {
+    border-top: 5px solid #2d7d9a;
+    border-bottom: 5px solid #2d7d9a;
+    padding: 18px 0;
+    margin: 15px auto 35px auto;
+    display: block;
+    text-align: center;
+    width: 65%;
+}
+/* Style for Inline Citations */
+
+div.nbox {
+    border-top: 5px solid #8a0909;
+    border-bottom: 5px solid #8a0909;
+    padding: 18px 0;
+    margin: 15px auto 35px auto;
+    display: block;
+    text-align: center;
+    width: 65%;
+}
+/* Style for Inline Citations */
+
+span.citation {
+    display: block;
+    text-align: right;
+    margin-top: 0px!important;
+}
+/* Display image */
+
+img.disp {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px!important;
+    margin-bottom: 45px!important;
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
+    max-width:95%;
+}
+img.dispafter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px!important;
+    margin-bottom: 35px!important;
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
+}
+/* Display dark/light table */
+ 
+table.disp {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    font-family: Calibri;
+}
+tr.disp {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+tr.dark {
+    background: var(--tr-dark, rgba(242,242,242,0.5));
+    padding: 0px;
+    margin-bottom: 0px;
+    vertical-align: top;
+}
+tr.light {
+    background: var(--tr-light, rgba(255,255,255,0.5)); 
+    padding: 0px;
+    margin-bottom: 0px;
+    vertical-align: top;
+}
+td {
+    padding: 5px!important;
+    vertical-align: middle!important;
+}
+td.left {
+    border: none;
+    vertical-align: middle;
+    margin: 5px!important;
+    width: 45px;
+    height: 45px;
+}
+p.icon {
+    border: 0;
+    margin: 0px!important;
+    vertical-align: middle!important;
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
+}
+img.fillericon {
+    border: 5px solid #C32424;
+    margin: 0px!important;
+    vertical-align: middle!important;
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
+}
+img.icon {
+    width: 45px!important;
+    height: 45px!important;
+    border: 0;
+    margin: 0px!important;
+    vertical-align: middle!important;
+}
+img.fillerimg {
+    border: 5px solid #C32424;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px!important;
+    margin-bottom: 45px!important;
+    padding-top: 0px!important;
+    padding-bottom: 0px!important;
+}
+
+
+p {
+    margin-top: 0px!important;
+}
+/* In-Box Paragraph Style */
+/
+p.qboxpara {
+    line-height: 18px;
+    margin-bottom: 5px;
+    font-size: 13pt;
+}
+p.tboxpara {
+    line-height: 18px;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    font-size: 13pt;
+}
+span.fillertext {
+    color: #C32424;
+	/* display: none; */
+}
+span.ital {
+    font-weight: bold!important;
+}
+span.term {
+    font-weight: bold!important;
+}
+
+/* Header Styles */
+
+h3.qboxheader {
+    color: #333333;
+    font: 18px/20px Georgia, "Times New Roman", Times, serif;
+    margin-top: 0px;
+    margin-bottom: 10px;
+}
+h2.tboxheader {
+    font-family: Calibri;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 0px;
+    font-variant: small-caps;
+}
+h1 {
+    font-family: Calibri;
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 0px!important;
+}
+h2 {
+    font-family: Calibri;
+    font-weight: 600;
+    font-size: 24px;
+    margin-bottom: 0px!important;
+    font-variant: small-caps;
+}
+h2.fillertext {
+    color: #C32424;
+}
+h3 {
+    font-family: Calibri;
+    font-weight: 600;
+    font-size: 19px;
+    margin-bottom: 0px!important;
+    font-variant: small-caps;
+}
+h4 {
+    font-family: Calibri;
+    font-weight: 500;
+    font-size: 19px;
+    margin-bottom: 0px!important;
+    font-variant: small-caps;
+}
