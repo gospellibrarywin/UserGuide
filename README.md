@@ -1,6 +1,8 @@
 # Gospel Library Help Guide 
 This is the online version of the userguide
 
+[Link to User Guide](https://gospellibrarywin.github.io/helpguide)
+
 ## Chapters
 [Introduction](eng/00.html)
 
