@@ -1,0 +1,431 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+	
+<head>
+	<meta charset="utf-8" />
+	<title>Chapter 16: How Do I Customize My Reading Experience?</title>
+	<link href="styles/helpstyles.css" rel="stylesheet">
+	
+
+	<style media="screen" type="text/css">
+		p.sampletext {
+			font-size: 10pt;
+		}
+
+		/* Pastel (iOS/Android) Color Set - "Mobile" */
+		span.pastel_red {
+			background-color: rgba(255,215,215,0.7);
+		}
+
+		span.pastel_pink {
+			background-color: rgba(255,225,253,0.7);
+		}
+
+		span.pastel_orange {
+			background-color: rgba(255,227,200,0.7);
+		}
+
+		span.pastel_yellow {
+			background-color: rgba(255,245,196,0.7);
+		}
+
+		span.pastel_green {
+			background-color: rgba(223,241,170,0.7);
+		}
+
+		span.pastel_blue {
+			background-color: rgba(205,247,249,0.7);
+		}
+
+		span.pastel_darkblue {
+			background-color: rgba(219,236,255,0.7);
+		}
+
+		span.pastel_purple {
+			background-color: rgba(231,216,251,0.7);
+		}
+
+		span.pastel_grey {
+			background-color: rgba(227,227,227,0.7);
+		}
+
+		span.pastel_brown {
+			background-color: rgba(237,216,205,0.7);
+		}
+
+		/* Muted Color Set*/
+		span.muted_red {
+			background-color: rgba(210,179,179,0.5);
+		}
+
+		span.muted_pink {
+			background-color: rgba(204,179,210,0.5);
+		}
+
+		span.muted_orange {
+			background-color: rgba(213,189,165,0.5);
+		}
+
+		span.muted_yellow {
+			background-color: rgba(230,232,166,0.5);
+		}
+
+		span.muted_green {
+			background-color: rgba(184,210,172,0.5);
+		}
+
+		span.muted_blue {
+			background-color: rgba(172,200,210,0.5);
+		}
+
+		span.muted_darkblue {
+			background-color: rgba(163,175,210,0.5);
+		}
+
+		span.muted_purple {
+			background-color: rgba(191,172,210,0.5);
+		}
+
+		span.muted_grey {
+			background-color: rgba(203,203,203,0.5);
+		}
+
+		span.muted_brown {
+			background-color: rgba(207,189,171,0.5);
+		}
+
+		/* Light Color Set */
+		span.light_red {
+			background-color: rgba(255,0,0,0.35);
+		}
+
+		span.light_pink {
+			background-color: rgba(255,125,125,0.35);
+		}
+
+		span.light_orange {
+			background-color: rgba(255,78,0,0.35);
+		}
+
+		span.light_yellow {
+			background-color: rgba(255,255,0,0.35);
+		}
+
+		span.light_green {
+			background-color: rgba(0,204,19,0.35);
+		}
+
+		span.light_blue {
+			background-color: rgba(135,155,255,0.35);
+		}
+
+		span.light_darkblue {
+			background-color: rgba(64,95,255,0.35);
+		}
+
+		span.light_purple {
+			background-color: rgba(157,29,255,0.35);
+		}
+
+		span.light_grey {
+			background-color: rgba(152,152,152,0.35);
+		}
+
+		span.light_brown {
+			background-color: rgba(148,80,0,0.35);
+		}
+
+		/* Bright Color Set */
+		span.bright_red {
+			background-color: rgba(255,0,0,0.7);
+		}
+
+		span.bright_pink {
+			background-color: rgba(255,125,125,0.7);
+		}
+
+		span.bright_orange {
+			background-color: rgba(255,78,0,0.7);
+		}
+
+		span.bright_yellow {
+			background-color: rgba(255,255,0,0.7);
+		}
+
+		span.bright_green {
+			background-color: rgba(0,204,19,0.7);
+		}
+
+		span.bright_blue {
+			background-color: rgba(135,155,255,0.7);
+		}
+
+		span.bright_darkblue {
+			background-color: rgba(64,95,255,0.7);
+		}
+
+		span.bright_purple {
+			background-color: rgba(157,29,255,0.7);
+		}
+
+		span.bright_grey {
+			background-color: rgba(152,152,152,0.7);
+		}
+
+		span.bright_brown {
+			background-color: rgba(148,80,0,0.7);
+		}
+
+		/* Dark Color Set*/
+		span.dark_red {
+			background-color: rgba(135,0,0,0.45);
+		}
+
+		span.dark_pink {
+			background-color: rgba(135,0,53,0.45);
+		}
+
+		span.dark_orange {
+			background-color: rgba(160,75,0,0.45);
+		}
+
+		span.dark_yellow {
+			background-color: rgba(135,135,0,0.45);
+		}
+
+		span.dark_green {
+			background-color: rgba(0,135,0,0.45);
+		}
+
+		span.dark_blue {
+			background-color: rgba(0,0,135,0.45);
+		}
+
+		span.dark_darkblue {
+			background-color: rgba(0,0,80,0.45);
+		}
+
+		span.dark_purple {
+			background-color: rgba(135,0,135,0.45);
+		}
+
+		span.dark_grey {
+			background-color: rgba(128,128,128,0.45);
+		}
+		/* Looks like in testing I somehow missed the grey here. Changed from 203, 203, 203 #73808080*/
+		span.dark_brown {
+			background-color: rgba(80,24,0,0.45);
+		}
+
+		/* Default Color Set */
+		span.default_red {
+			background-color: rgba(255,0,0,0.6);
+		}
+
+		span.default_pink {
+			background-color: rgba(255,137,136,0.6);
+		}
+
+		span.default_orange {
+			background-color: rgba(255,80,0,0.6);
+		}
+
+		span.default_yellow {
+			background-color: rgba(255,255,0,0.6);
+		}
+
+		span.default_green {
+			background-color: rgba(127,255,0,0.6);
+		}
+
+		span.default_blue {
+			background-color: rgba(0,179,253,0.6);
+		}
+
+		span.default_darkblue {
+			background-color: rgba(0,110,213,0.55);
+		}
+
+		span.default_purple {
+			background-color: rgba(116,0,215,0.45);
+		}
+
+		span.default_grey {
+			background-color: rgba(150,150,150,0.55);
+		}
+
+		span.default_brown {
+			background-color: rgba(153,69,0,0.4);
+		}
+	</style>
+</head>
+	
+<body>
+	<h1>Chapter 16: How Do I Customize My Reading Experience?</h1>
+	<p><a href="https://youtu.be/SP6XzAAPFQE"><img src="imgs/play.png" class="inlineimage">  How Do I Customize My Reading Experience - Silent Video</a></p>
+	<p>You can change your settings in Gospel Library at any time by pressing the settings button (<img src="imgs/settings.png" class="inlineimage">) at the bottom of the navigation bar. From the Settings pane, you can change the base text size, change the default font for text, switch themes, change the interface language, change the default visibility of notes, and much more. Some of these settings are also available in the View ribbon.</p>
+
+	<h2>The View Ribbon</h2>
+	<p>The View ribbon is where a few appearance settings are available for quick access. Each of the icons is explained in the list below.</p>
+	<img src="imgs/viewribbon.png" class="disp WillChange">
+	<h2>Buttons on View Ribbon</h2>
+	<table class="disp">
+		<tr class="light">
+			<td class="left"><p class="icon"><img class="icon" src="imgs/view_links.png" alt="The Show/Hide Reference Links button" /></p></td>
+			<td>Show Hyperlinks</td>
+			<td>Allows you to show or hide the blue-colored links to various references in Gospel Library content. This setting is also available in the Settings pane in the Appearance section as a toggle with the same name.</td>
+		</tr>
+		<tr class="dark">
+			<td class="left"><p class="icon"><img class="icon" src="imgs/view_superscripts.png" alt="The Show/Hide Superscripts button" /></p></td>
+			<td>Show Superscripts</td>
+			<td>Allows you to show or hide the superscript numbers and letters next to references in Gospel Library content. This setting is also available in the Settings pane in the Appearance section as a toggle with the same name.</td>
+		</tr>
+		<tr class="light">
+			<td class="left"><p class="icon"><img class="icon" src="imgs/view_pages.png" alt="The Show/Hide Page Numbers button" /></p></td>
+			<td>Show Page Numbers</td>
+			<td>Allows you to show or hide the page numbers on the right side of content in the app, when page numbers are available. This setting is also available in the Settings pane in the Appearance section as a toggle with the same name.</td>
+		</tr>
+		<tr class="dark">
+			<td class="left"><p class="icon"><img class="icon" src="imgs/view_notes.png" alt="The Show/Hide Notes button" /></p></td>
+			<td>Show Notes</td>
+			<td>Allows you to show or hide the inline notes, tags, and other annotations that appear in notes boxes. This setting is also available in the Settings pane in the Appearance section as a toggle with the same name.</td>
+		</tr>
+		<tr class="light">
+			<td class="left"><p class="icon"><img class="icon" src="imgs/visiblenotebooksbutton.png" alt="The visible notebooks button" /></p></td>
+			<td>Visible Notebooks</td>
+			<td>Allows you to show or hide annotations stored in your various notebooks based on the notebooks the annotations are stored in.</td>
+		</tr>
+	</table>
+
+	<h2>Text Size</h2>
+	<p>There are several means of adjusting the size of text in Gospel Library. If you're on a touch device, you can adjust the size of the text you’re reading by pinching your fingers inward on the screen or by spreading them apart from one another. If you’re on a device with a keyboard and mouse, you can use the familiar keyboard shortcuts, listed below, to increase or decrease the size of the text.</p>
+
+	<table class="disp">
+		<tr class="disp">
+			<td>Shortcut</td>
+			<td>Action</td>
+		</tr>
+		<tr class="dark">
+			<td>Ctrl + Mouse Wheel Up</td>
+			<td rowspan="2">Increase Text Size</td>
+		</tr>
+		<tr class="dark">
+			<td>Ctrl + +</td>
+		</tr>
+		<tr>
+			<td>Ctrl + Mouse Wheel Back</td>
+			<td rowspan="2">Decrease Text Size</td>
+		</tr>
+		<tr>
+			<td>Ctrl + -</td>
+		</tr>
+		<tr class="dark">
+			<td>Ctrl + 0</td>
+			<td>Reset Text Size to Default</td>
+		</tr>
+	</table>
+
+	<p>You can also adjust the size of text by visiting the Settings pane, opening the Appearance section, and moving the Text Size slider until the preview text is a size you are comfortable with.</p>
+
+	<img class="disp" src="imgs/textsize.png" alt="The text size option in the Settings pane." />
+
+	<h2>Highlight Colors</h2>
+	<p>
+		Highlight colors are the colors you use to mark scriptures and other gospel passages. We've included six different sets of colors for you to choose from, from the brightest sets (default and bright), to the softest sets (muted and mobile). The mobile color set is the color set designed to closely match the colors used on iOS devices (iPhone, iPad, and iPod) and on Android phones and tablets. You can select your highlight colors in the Appearance section of the Settings pane.
+
+		<table class="disp">
+			<tr class="disp">
+				<td>Color Set</td>
+				<td>Sample</td>
+			</tr>
+			<tr>
+				<td>Default</td>
+				<td>
+	<p class="sampletext">
+		Lorem <span class="default_red">ipsum dolor sit amet, consectetur adipiscing elit.</span> Aliquam placerat <span class="default_pink">lacinia erat, eu sodales</span> lectus sodales non. <span class="default_brown">Nam finibus velit ut convallis consectetur.</span> Integer varius mollis blandit. Curabitur ac lectus feugiat, auctor lectus quis, dictum erat. <span class="default_green">Donec mollis erat orci, a gravida eros bibendum at.</span> Sed faucibus ipsum ipsum, eu tempus sapien mollis imperdiet. <span class="default_darkblue">Maecenas faucibus nibh eu nunc egestas, id dignissim nunc consectetur. Duis at vestibulum ex,</span> vitae dignissim velit. Aliquam <span class="default_yellow">tempor turpis tristique egestas imperdiet.</span> <span class="default_blue">Calbrotands ultricies</span> nec dui consectetur <span class="default_purple">accumsan. Donec sagittis metus a placerat efficitur. Vestibulum odio lorem, ultricies mattis ante elementum, scelerisque consequat ligula.</span> Integer non metus sagittis, varius <span class="default_grey">enim id, euismod tortor. Cras id quam nec orci gravida pulvinar.</span> Nunc non accumsan nunc. Nulla feugiat risus quis tortor interdum, in cursus est faucibus. <span class="default_orange">Etiam pellentesque ipsum arcu, vitae porttitor quam commodo sed.</span> Donec nec felis pretium neque egestas vehicula.
+	</p>
+	</td>
+	</tr>
+	<tr>
+		<td>Bright</td>
+		<td>
+			<p class="sampletext">
+				Lorem <span class="bright_red">ipsum dolor sit amet, consectetur adipiscing elit.</span> Aliquam placerat <span class="bright_pink">lacinia erat, eu sodales</span> lectus sodales non. <span class="bright_brown">Nam finibus velit ut convallis consectetur.</span> Integer varius mollis blandit. Curabitur ac lectus feugiat, auctor lectus quis, dictum erat. <span class="bright_green">Donec mollis erat orci, a gravida eros bibendum at.</span> Sed faucibus ipsum ipsum, eu tempus sapien mollis imperdiet. <span class="bright_darkblue">Maecenas faucibus nibh eu nunc egestas, id dignissim nunc consectetur. Duis at vestibulum ex,</span> vitae dignissim velit. Aliquam <span class="bright_yellow">tempor turpis tristique egestas imperdiet.</span> <span class="bright_blue">Calbrotands ultricies</span> nec dui consectetur <span class="bright_purple">accumsan. Donec sagittis metus a placerat efficitur. Vestibulum odio lorem, ultricies mattis ante elementum, scelerisque consequat ligula.</span> Integer non metus sagittis, varius <span class="bright_grey">enim id, euismod tortor. Cras id quam nec orci gravida pulvinar.</span> Nunc non accumsan nunc. Nulla feugiat risus quis tortor interdum, in cursus est faucibus. <span class="bright_orange">Etiam pellentesque ipsum arcu, vitae porttitor quam commodo sed.</span> Donec nec felis pretium neque egestas vehicula.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td>Light</td>
+		<td>
+			<p class="sampletext">
+				Lorem <span class="light_red">ipsum dolor sit amet, consectetur adipiscing elit.</span> Aliquam placerat <span class="light_pink">lacinia erat, eu sodales</span> lectus sodales non. <span class="light_brown">Nam finibus velit ut convallis consectetur.</span> Integer varius mollis blandit. Curabitur ac lectus feugiat, auctor lectus quis, dictum erat. <span class="light_green">Donec mollis erat orci, a gravida eros bibendum at.</span> Sed faucibus ipsum ipsum, eu tempus sapien mollis imperdiet. <span class="light_darkblue">Maecenas faucibus nibh eu nunc egestas, id dignissim nunc consectetur. Duis at vestibulum ex,</span> vitae dignissim velit. Aliquam <span class="light_yellow">tempor turpis tristique egestas imperdiet.</span> <span class="light_blue">Calbrotands ultricies</span> nec dui consectetur <span class="light_purple">accumsan. Donec sagittis metus a placerat efficitur. Vestibulum odio lorem, ultricies mattis ante elementum, scelerisque consequat ligula.</span> Integer non metus sagittis, varius <span class="light_grey">enim id, euismod tortor. Cras id quam nec orci gravida pulvinar.</span> Nunc non accumsan nunc. Nulla feugiat risus quis tortor interdum, in cursus est faucibus. <span class="light_orange">Etiam pellentesque ipsum arcu, vitae porttitor quam commodo sed.</span> Donec nec felis pretium neque egestas vehicula.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td>Dark</td>
+		<td>
+			<p class="sampletext">
+				Lorem <span class="dark_red">ipsum dolor sit amet, consectetur adipiscing elit.</span> Aliquam placerat <span class="dark_pink">lacinia erat, eu sodales</span> lectus sodales non. <span class="dark_brown">Nam finibus velit ut convallis consectetur.</span> Integer varius mollis blandit. Curabitur ac lectus feugiat, auctor lectus quis, dictum erat. <span class="dark_green">Donec mollis erat orci, a gravida eros bibendum at.</span> Sed faucibus ipsum ipsum, eu tempus sapien mollis imperdiet. <span class="dark_darkblue">Maecenas faucibus nibh eu nunc egestas, id dignissim nunc consectetur. Duis at vestibulum ex,</span> vitae dignissim velit. Aliquam <span class="dark_yellow">tempor turpis tristique egestas imperdiet.</span> <span class="dark_blue">Calbrotands ultricies</span> nec dui consectetur <span class="dark_purple">accumsan. Donec sagittis metus a placerat efficitur. Vestibulum odio lorem, ultricies mattis ante elementum, scelerisque consequat ligula.</span> Integer non metus sagittis, varius <span class="dark_grey">enim id, euismod tortor. Cras id quam nec orci gravida pulvinar.</span> Nunc non accumsan nunc. Nulla feugiat risus quis tortor interdum, in cursus est faucibus. <span class="dark_orange">Etiam pellentesque ipsum arcu, vitae porttitor quam commodo sed.</span> Donec nec felis pretium neque egestas vehicula.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td>Muted</td>
+		<td>
+			<p class="sampletext">
+				Lorem <span class="muted_red">ipsum dolor sit amet, consectetur adipiscing elit.</span> Aliquam placerat <span class="muted_pink">lacinia erat, eu sodales</span> lectus sodales non. <span class="muted_brown">Nam finibus velit ut convallis consectetur.</span> Integer varius mollis blandit. Curabitur ac lectus feugiat, auctor lectus quis, dictum erat. <span class="muted_green">Donec mollis erat orci, a gravida eros bibendum at.</span> Sed faucibus ipsum ipsum, eu tempus sapien mollis imperdiet. <span class="muted_darkblue">Maecenas faucibus nibh eu nunc egestas, id dignissim nunc consectetur. Duis at vestibulum ex,</span> vitae dignissim velit. Aliquam <span class="muted_yellow">tempor turpis tristique egestas imperdiet.</span> <span class="muted_blue">Calbrotands ultricies</span> nec dui consectetur <span class="muted_purple">accumsan. Donec sagittis metus a placerat efficitur. Vestibulum odio lorem, ultricies mattis ante elementum, scelerisque consequat ligula.</span> Integer non metus sagittis, varius <span class="muted_grey">enim id, euismod tortor. Cras id quam nec orci gravida pulvinar.</span> Nunc non accumsan nunc. Nulla feugiat risus quis tortor interdum, in cursus est faucibus. <span class="muted_orange">Etiam pellentesque ipsum arcu, vitae porttitor quam commodo sed.</span> Donec nec felis pretium neque egestas vehicula.
+			</p>
+		</td>
+	</tr>
+	<tr>
+		<td>Mobile</td>
+		<td>
+			<p class="sampletext">
+				Lorem <span class="pastel_red">ipsum dolor sit amet, consectetur adipiscing elit.</span> Aliquam placerat <span class="pastel_pink">lacinia erat, eu sodales</span> lectus sodales non. <span class="pastel_brown">Nam finibus velit ut convallis consectetur.</span> Integer varius mollis blandit. Curabitur ac lectus feugiat, auctor lectus quis, dictum erat. <span class="pastel_green">Donec mollis erat orci, a gravida eros bibendum at.</span> Sed faucibus ipsum ipsum, eu tempus sapien mollis imperdiet. <span class="pastel_darkblue">Maecenas faucibus nibh eu nunc egestas, id dignissim nunc consectetur. Duis at vestibulum ex,</span> vitae dignissim velit. Aliquam <span class="pastel_yellow">tempor turpis tristique egestas imperdiet.</span> <span class="pastel_blue">Calbrotands ultricies</span> nec dui consectetur <span class="pastel_purple">accumsan. Donec sagittis metus a placerat efficitur. Vestibulum odio lorem, ultricies mattis ante elementum, scelerisque consequat ligula.</span> Integer non metus sagittis, varius <span class="pastel_grey">enim id, euismod tortor. Cras id quam nec orci gravida pulvinar.</span> Nunc non accumsan nunc. Nulla feugiat risus quis tortor interdum, in cursus est faucibus. <span class="pastel_orange">Etiam pellentesque ipsum arcu, vitae porttitor quam commodo sed.</span> Donec nec felis pretium neque egestas vehicula.
+			</p>
+		</td>
+	</tr>
+	</table>
+
+	<div class="nbox">
+		<h2 class="tboxheader">Note</h2>
+		<p class="tboxpara">Limitations of the technology used to sync annotations with ChurchOfJesusChrist.org and other versions of Gospel Library mean that there can only be ten colors available in the app&mdash;red, pink, orange, yellow, green, blue, dark blue, purple, grey, and brown. This limitation affects all versions of Gospel Library and ChurchOfJesusChrist.org.</p>
+	</div>
+
+	<h2>Theme</h2>
+	<p>There are five themes in Gospel Library for Windows. In addition to the default blue and white theme, there's a night theme&mdash;a dark theme for reading in low-light, a black theme&mdash;an even darker, higher-contrast theme, a sepia theme&mdash;a theme that's designed to be easy on the eyes, and system&mdash;a theme that uses your device's color settings to color the application. In addition, there is the option to create your own custom theme, choosing from an array of colors as your primary color.</p>
+	<p>You can change the theme by visiting the Settings pane. The sepia theme is pictured below.</p>
+
+	<img class="disp WillChange" src="imgs/themesepia.png" alt="The sepia theme." />
+
+	<h3>Acrylic</h3>
+	<p>
+		In addition to themes, the app offers an option to use acrylic, which adds a glass-like effect to the interface. The opacity of the glass effect is controlled by the "Transparency" setting below the "Use Acrylic" option at Settings > Appearance > Use Acrylic. To make the Gospel library window more transparent, move the slider bar under “Transparency” to the left; to make it less transparent, move the bar to the right.
+
+		<div class="tbox">
+			<h2 class="tboxheader">Tip</h2>
+			<p class="tboxpara">Many tablets and smartphones have a sensor in them that can detect if it is dark where you are reading. The Auto Theme setting found in the Settings pane can automatically shift the app to the black theme for you when appropriate.</p>
+		</div>
+
+		<h2>Alternate Fonts</h2>
+<p>To ensure optimum readability, we've made it possible to change the default font in gospel content to one from a list of fonts, including those installed on your device. We have also included OpenDyslexic, a font designed to make reading easier for those with dyslexia. When OpenDyslexic is selected, the entire application uses that font instead of the default. Other fonts will only affect content text.</p>
+
+	<img class="disp" src="imgs/fonts.png" alt="A list of available fonts." />
+
+	<h2>Default Note Visibility</h2>
+	<p>You can choose whether your notes are expanded or collapsed by default using an option in the Settings pane, in the Appearance section. Expanded notes mean that all notes will be fully visible inside the text you are reading, whereas collapsed notes will only show the note icon beside the verse or paragraph they belong to.</p>
+
+	<img class="disp" src="imgs/notevisibility.png" alt="The option that allows you to select the default visibility of notes." />
+
+	<h2>Navigation Panes</h2>
+	<p>If you'd prefer to keep open a navigation pane, like the Bookmarks pane or the History pane, you can do so by pinning it open with the pin icon (<img src="imgs/pin.png" class="inlineimage">) at the top of any navigation pane. When your panes are pinned open, text will move out from underneath them and the pane will remain open until you manually close it, as in the picture below.</p>
+
+	<img class="disp WillChange" src="imgs/pinpane.png" alt="A pane pinned open." />
+
+	<h2>Immersive Mode</h2>
+	<p>You can also turn immersive mode on or off using the toggle (<img class="inlineimage" src="imgs/immersivetoggle.png">) beside the minimize button at the top of the app. You can also double tap or double-click on any blank space in the reading area to hide the app's user interface to increase the size of the reading area and to reduce distraction. Double tapping or double-clicking on any blank space will also bring back the interface when it has been hidden. Although the main toggle will continue to work, the double tapping feature will not work in areas with sheet music enabled, such as the hymns or Children's Songbook.</p>
+</body>
+	
+</html>
